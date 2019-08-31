@@ -1,0 +1,9 @@
+language: csharp
+solution: "./CSharpStarterConsole.sln"
+notifications:
+  email:
+    - dicer2000@yahoo.com
+install:
+- travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./CSharpStarterConsole.sln
+script:
+- xbuild ./CSharpStarterConsole.sln
